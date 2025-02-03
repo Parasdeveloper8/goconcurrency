@@ -19,8 +19,10 @@ func main() {
 	}()
 
 	select {
+	//if message comes from chnfirst
 	case chnf := <-chnfirst:
 		fmt.Println(chnf)
+		//if message comes from chntwo
 	case chnt := <-chntwo:
 		fmt.Println(chnt)
 	}
